@@ -104,7 +104,7 @@ class TestCityOps(unittest.TestCase):
 
     def test_get_incident_priority(self):
 
-        for incident_id, priority in ((1, "P1"), (2, "P2")):
+        for incident_id, priority in ((1, "normal"), (2, "high")):
             with self.subTest(incident_id=incident_id):
 
                 response = self.client.get(
@@ -129,13 +129,21 @@ class TestCityOps(unittest.TestCase):
 
     def test_closed_incident_priority(self):
 
-        for severity, priority in (("high", "P1"), ("medium", "P2")):
-            with self.subTest(severity=severity):
+        cases = (
+            ("critical", "open", "critical"),
+            ("critical", "closed", "critical"),
+            ("high", "closed", "high"),
+            ("high", "open", "normal"),
+            ("medium", "open", "high"),
+            ("medium", "closed", "normal"),
+        )
+        for severity, status, priority in cases:
+            with self.subTest(severity=severity, status=status):
                 with patch("app.INCIDENTS", [{
                     "id": 1,
                     "title": "Resolved incident",
                     "severity": severity,
-                    "status": "closed"
+                    "status": status
                 }]):
 
                     response = self.client.get("/incidents/1/priority")
@@ -145,6 +153,19 @@ class TestCityOps(unittest.TestCase):
                         response.json,
                         {"id": 1, "priority": priority}
                     )
+
+    def test_unmatched_incident_priority_is_normal(self):
+
+        with patch("app.INCIDENTS", [{
+            "id": 1,
+            "title": "Unclassified incident",
+            "severity": "low",
+            "status": "open"
+        }]):
+            response = self.client.get("/incidents/1/priority")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json, {"id": 1, "priority": "normal"})
 
     def test_get_missing_incident_priority(self):
 
