@@ -1,0 +1,12 @@
+{
+  "mission_id": "DEV-001",
+  "status": "blocked",
+  "current_phase": "evaluate",
+  "completed_phases": ["research", "plan", "test"],
+  "next_phase": "evaluate",
+  "last_test_status": "passed",
+  "last_evaluation": {
+    "status": "blocked",
+    "reason": "Required eval/evaluate.py is missing."
+  }
+}

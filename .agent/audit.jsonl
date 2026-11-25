@@ -1,0 +1,34 @@
+{"timestamp": "2026-11-25T06:04:42.807958+00:00", "event": "application_started", "details": {"state_file": "C:\\Users\\neekumar\\Downloads\\cityops-livedemo-001\\Gh-600-25-11-2026-CityOpsApp\\.agent\\state.json", "audit_file": "C:\\Users\\neekumar\\Downloads\\cityops-livedemo-001\\Gh-600-25-11-2026-CityOpsApp\\.agent\\audit.jsonl"}}
+{"timestamp": "2026-11-25T06:05:39.813112+00:00", "event": "read_agent_state", "details": {"mission_id": "DEV-001"}}
+{"timestamp": "2026-11-25T06:05:39.816977+00:00", "event": "health_check", "details": {"endpoint": "/"}}
+{"timestamp": "2026-11-25T06:05:39.843841+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:05:39.847976+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:05:39.855726+00:00", "event": "get_incident", "details": {"incident_id": 1}}
+{"timestamp": "2026-11-25T06:05:39.861088+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:05:39.886809+00:00", "event": "get_incident_priority", "details": {"incident_id": 2, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:05:39.923312+00:00", "event": "list_incidents", "details": {"count": 2}}
+{"timestamp": "2026-11-25T06:05:39.928046+00:00", "event": "incident_not_found", "details": {"incident_id": 999}}
+{"timestamp": "2026-11-25T06:05:39.933755+00:00", "event": "incident_not_found", "details": {"incident_id": 999}}
+{"timestamp": "2026-11-25T06:05:39.965697+00:00", "event": "health_check", "details": {"endpoint": "/"}}
+{"timestamp": "2026-11-25T06:05:39.969466+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:05:39.972263+00:00", "event": "get_incident", "details": {"incident_id": 1}}
+{"timestamp": "2026-11-25T06:05:39.974696+00:00", "event": "get_incident_priority", "details": {"incident_id": 2, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:05:39.977537+00:00", "event": "get_incident", "details": {"incident_id": 2}}
+{"timestamp": "2026-11-25T06:05:39.980261+00:00", "event": "list_incidents", "details": {"count": 2}}
+{"timestamp": "2026-11-25T06:42:31.298963+00:00", "event": "read_agent_state", "details": {"mission_id": "DEV-001"}}
+{"timestamp": "2026-11-25T06:42:31.302477+00:00", "event": "health_check", "details": {"endpoint": "/"}}
+{"timestamp": "2026-11-25T06:42:31.351450+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:42:31.353640+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:42:31.356625+00:00", "event": "get_incident", "details": {"incident_id": 1}}
+{"timestamp": "2026-11-25T06:42:31.359571+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:42:31.395171+00:00", "event": "get_incident_priority", "details": {"incident_id": 2, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:42:31.446092+00:00", "event": "list_incidents", "details": {"count": 2}}
+{"timestamp": "2026-11-25T06:42:31.450341+00:00", "event": "incident_not_found", "details": {"incident_id": 999}}
+{"timestamp": "2026-11-25T06:42:31.454331+00:00", "event": "incident_not_found", "details": {"incident_id": 999}}
+{"timestamp": "2026-11-25T06:42:31.484128+00:00", "event": "health_check", "details": {"endpoint": "/"}}
+{"timestamp": "2026-11-25T06:42:31.490909+00:00", "event": "get_incident_priority", "details": {"incident_id": 1, "priority": "P1"}}
+{"timestamp": "2026-11-25T06:42:31.495868+00:00", "event": "get_incident", "details": {"incident_id": 1}}
+{"timestamp": "2026-11-25T06:42:31.499535+00:00", "event": "get_incident_priority", "details": {"incident_id": 2, "priority": "P2"}}
+{"timestamp": "2026-11-25T06:42:31.503467+00:00", "event": "get_incident", "details": {"incident_id": 2}}
+{"timestamp": "2026-11-25T06:42:31.507495+00:00", "event": "list_incidents", "details": {"count": 2}}
+{"timestamp": "2026-11-25T06:42:46.7131205Z", "event": "incident_priority_validation", "details": {"decision": "Preserve the existing priority endpoint and tests; no application changes required.", "tests": {"status": "passed", "count": 11}, "evaluation": {"status": "blocked", "reason": "Required eval/evaluate.py is missing."}, "security_review": "Existing integer route and fixed severity mapping reviewed; no code, dependency, permission, or security-control changes.", "state_status": "blocked", "ci": "not_run"}}
